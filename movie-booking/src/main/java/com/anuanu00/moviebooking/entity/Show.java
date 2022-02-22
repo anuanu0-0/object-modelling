@@ -5,28 +5,28 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @ToString
 @EqualsAndHashCode
 @RequiredArgsConstructor
 public class Show {
     private final String id;
-    private final LocalDate start;
-    private final LocalDate end;
-    private final Movie movie;
-    private final Cinema cinema;
+    private final Date start;
+    private final Date end;
     private final Screen screen;
+    private final Cinema cinema;
+    private final Movie movie;
 
     public String getId() {
         return id;
     }
 
-    public LocalDate getStart() {
+    public Date getStart() {
         return start;
     }
 
-    public LocalDate getEnd() {
+    public Date getEnd() {
         return end;
     }
 

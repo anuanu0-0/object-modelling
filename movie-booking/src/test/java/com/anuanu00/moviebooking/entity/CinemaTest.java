@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 @DisplayName("CinemaTest")
 public class CinemaTest {
 
-    Cinema cinema;
+    private Cinema cinema;
 
     @BeforeEach
     public void setup() {
@@ -21,20 +21,20 @@ public class CinemaTest {
     @Test
     @DisplayName("getScreenByName method should return screen given screenName")
     public void getScreenByName_GivenScreenName_ShouldReturnScreen() {
-        // Arrange after setup
+        // Arrange
         Screen actualScreen = new Screen("2", "ScreenB");
 
         // Act
-        Screen expextedScreen = cinema.getScreenByName("ScreenB");
+        Screen expectedScreen = cinema.getScreenByName("ScreenB");
 
         // Assert
-        Assertions.assertEquals(expextedScreen, actualScreen);
+        Assertions.assertEquals(expectedScreen, actualScreen);
     }
 
     @Test
     @DisplayName("getScreenById method should return screen given screenId")
     public void getScreenById_GivenScreenId_ShouldReturnScreen() {
-        // Arrange after setup
+        // Arrange
         Screen actualScreen = new Screen("2", "ScreenB");
 
         // Act
@@ -58,9 +58,9 @@ public class CinemaTest {
     @DisplayName("getScreenById method should return null given screenId not present in cinema")
     public void getScreenId_GivenScreenIdNotPresentInCinema_ShouldReturnNull() {
         // Act
-        Screen expextedScreen = cinema.getScreenById("4");
+        Screen expectedScreen = cinema.getScreenById("4");
 
         // Assert
-        Assertions.assertNull(expextedScreen);
+        Assertions.assertNull(expectedScreen);
     }
 }
