@@ -30,15 +30,15 @@ public class Show {
         return end;
     }
 
-    private String getScreenName() {
+    public String getScreenName() {
         return screen.getName();
     }
 
-    private String getCinemaName() {
+    public String getCinemaName() {
         return cinema.getName();
     }
 
-    private String getMovieTitle() {
+    public String getMovieTitle() {
         return movie.getTitle();
     }
 }
