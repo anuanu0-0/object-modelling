@@ -18,5 +18,4 @@ public class ShowResponse {
     private String screenName;
     private Date start;
     private Date end;
-
 }
