@@ -43,9 +43,7 @@ public class TicketService implements ITicketService{
             showSeat.lock();
             iShowSeatRepository.updateShowSeat(showSeat);
         }
-
-        Ticket ticket = iTicketRepository.saveTicket(customer, show, seatList);
-        return ticket;
+        return iTicketRepository.saveTicket(customer, show, seatList);
     }
 
     @Override
