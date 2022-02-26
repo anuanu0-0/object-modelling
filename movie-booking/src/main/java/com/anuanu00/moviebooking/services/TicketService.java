@@ -12,16 +12,16 @@ import java.util.List;
 
 public class TicketService implements ITicketService{
 
-    private final ITicketRepository iTicketRepository;
     private final ICustomerRepository iCustomerRepository;
-    private final IShowRepository iShowRepository;
     private final IShowSeatRepository iShowSeatRepository;
+    private final IShowRepository iShowRepository;
+    private final ITicketRepository iTicketRepository;
 
-    public TicketService(ITicketRepository iTicketRepository, ICustomerRepository iCustomerRepository, IShowRepository iShowRepository, IShowSeatRepository iShowSeatRepository) {
-        this.iTicketRepository = iTicketRepository;
+    public TicketService(ICustomerRepository iCustomerRepository, IShowSeatRepository iShowSeatRepository, IShowRepository iShowRepository, ITicketRepository iTicketRepository) {
         this.iCustomerRepository = iCustomerRepository;
-        this.iShowRepository = iShowRepository;
         this.iShowSeatRepository = iShowSeatRepository;
+        this.iShowRepository = iShowRepository;
+        this.iTicketRepository = iTicketRepository;
     }
 
     @Override
