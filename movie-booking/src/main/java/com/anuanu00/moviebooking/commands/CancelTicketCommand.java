@@ -19,6 +19,7 @@ public class CancelTicketCommand implements ICommand{
         try {
             iTicketService.cancelTicket(ticketId);
             System.out.println("Cancellation Successful!");
+            System.out.println();
         } catch (NoSuchTicketFoundException e) {
             System.out.println(e);
         }

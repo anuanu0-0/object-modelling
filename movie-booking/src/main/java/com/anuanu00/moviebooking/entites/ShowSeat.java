@@ -13,7 +13,7 @@ public class ShowSeat {
     private final String id;
     private final Seat seat;
     private final Show show;
-    private ShowSeatStatus showSeatStatus;
+    private ShowSeatStatus showSeatStatus = ShowSeatStatus.UNRESERVED;
 
     public int getSeatRow() {
         return seat.getSeatRow();
